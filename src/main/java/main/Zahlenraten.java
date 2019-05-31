@@ -12,7 +12,7 @@ public class Zahlenraten {
     public int zahlZuRaten = 0;
     boolean fertig = false;
     int versuche = 0;
-    int startid = 100;
+    int startid = (int)(System.currentTimeMillis()%10000000);
     Statement statement = null;
 
     public Zahlenraten(Scanner scanner) {
@@ -65,7 +65,7 @@ public class Zahlenraten {
 
     public void addUserToDatabase(String name) throws SQLException {
         startid++;
-        statement.executeUpdate("Insert into zahlenraten.gewinner (id, name, password) values (" + startid + ", '" + name + "', 'pass')");
+        statement.executeUpdate("Insert into zahlenraten.gewinner (id, name, passwort, punkte) values (" + startid + ", '" + name + "', 'pass', "+ versuche +")");
     }
 
     public void verbindeZuDatenbank() {
