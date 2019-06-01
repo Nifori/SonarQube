@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - oraclejdk10
+  - oraclejdk11
 addons:
   sonarcloud:
     organization: "nifori-github" # the key of the org you chose at step #3
