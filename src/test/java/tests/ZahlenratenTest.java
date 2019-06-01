@@ -25,12 +25,12 @@ class ZahlenratenTest {
         String input = "50";
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));
-            InputStream in = new ByteArrayInputStream(input.getBytes());
+        InputStream in = new ByteArrayInputStream(input.getBytes());
         Scanner scanner = new Scanner(in);
         Zahlenraten raten = new Zahlenraten(scanner);
         raten.rateRunde();
         byte[] byteArray = baos.toByteArray();
-        assertEquals("Deine geratene Zahl 50 ist zu hoch!\r\n" +
-                "Gebrauchte Versuche: 1\r\n", new String(byteArray));
+        assertEquals("Deine geratene Zahl 50 ist zu hoch!" + System.lineSeparator() +
+                "Gebrauchte Versuche: 1" + System.lineSeparator(), new String(byteArray));
     }
 }
