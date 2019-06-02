@@ -71,10 +71,10 @@ public class Zahlenraten {
     public void verbindeZuDatenbank() {
         String mySQLUrl = "jdbc:mysql://127.0.0.1:3306";
         String dbUser = "zahlenUser";
-        String dbPasswort = "zahlenPasswort";
+        String dbPassword = "zahlenPasswort";
 
         try {
-            Connection conn = DriverManager.getConnection(mySQLUrl, dbUser, dbPasswort);
+            Connection conn = DriverManager.getConnection(mySQLUrl, dbUser, dbPassword);
             statement = conn.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
