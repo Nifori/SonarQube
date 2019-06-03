@@ -13,6 +13,7 @@ This Project is about showing how to use SonarQube to permanently get feedback a
     ```SQL
     CREATE SCHEMA zahlenraten;
     CREATE TABLE zahlenraten.gewinner (id INT NOT NULL, name VARCHAR(45) NULL, passwort VARCHAR(45) NULL, punkte INT NULL);
+    SET GLOBAL time_zone = '+2:00';
     ```
 - The database must know a user 'zahlenUser' with the password 'zahlenPasswort'
 - Have Java 11 installed ([Java 11-Download](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html))
