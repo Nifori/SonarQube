@@ -1,0 +1,11 @@
+language: java
+jdk:
+  - oraclejdk11
+addons:
+  sonarcloud:
+    organization: "nifori-github" # the key of the org you chose at step #3
+    token:
+      secure: $SONAR_LOGIN # encrypted value of your token
+script:
+  - mvn package
+  - sonar-scanner
