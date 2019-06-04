@@ -16,6 +16,7 @@ This Project is about showing how to use SonarQube to permanently get feedback a
     SET GLOBAL time_zone = '+2:00';
     ```
 - The database must know a user 'zahlenUser' with the password 'zahlenPasswort'
+    - He must have access to the schema 'zahlenraten'
 - Have Java 11 installed ([Java 11-Download](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html))
 - Java 11 must be set in your environment variable JAVA_HOME
 - Have SonarQube Scanner installed to run the analysis local ([SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner))
